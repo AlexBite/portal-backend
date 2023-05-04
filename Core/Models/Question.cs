@@ -4,7 +4,6 @@ namespace Core.Models;
 
 public class Question
 {
-    [Key]
-    public int Id;
-    public string Content;
+    [Key] public int Id { get; set; }
+    public string Content { get; set; } = string.Empty;
 }
