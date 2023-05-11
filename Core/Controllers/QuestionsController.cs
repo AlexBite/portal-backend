@@ -1,7 +1,6 @@
 ﻿using Core.Data;
 using Core.DTO;
 using Core.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,8 +16,7 @@ public class QuestionsController : ControllerBase
     {
         _dbContext = dbContext;
     }
-
-    [DisableCors]
+    
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Question>>> GetQuestions()
     {
